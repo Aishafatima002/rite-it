@@ -1,5 +1,5 @@
 body {
-    background-image: url("/assets/pexels-photo-399161.webp"); /* Use your image URL here */
+    background-image: url("./assets/pexels-lum3n-44775-399161\ \(1\).jpg"); /* Use your image URL here */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -113,7 +113,7 @@ h1, h3 {
     font-weight: 700;
     color: #ffffff; /* White text for headers */
 }
-
+/* Navbar styling */
 /* Navbar styling */
 .navbar {
     font-family: 'Helvetica', sans-serif;

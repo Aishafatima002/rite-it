@@ -1,10 +1,28 @@
+// Import Firebase modules
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword,signOut, GoogleAuthProvider,signInWithPopup} from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
-import {
-    getFirestore, collection, addDoc, serverTimestamp, query, orderBy,  doc, getDocs
-    , updateDoc,setDoc
+import { 
+    getAuth, 
+    createUserWithEmailAndPassword, 
+    signInWithEmailAndPassword, 
+    signOut, 
+    GoogleAuthProvider, 
+    signInWithPopup, 
+
+} from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
+
+import { 
+    getFirestore, 
+    collection, 
+    addDoc, 
+    serverTimestamp, 
+    query, 
+    orderBy, 
+    doc, 
+    getDocs, 
+    setDoc 
 } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
 
+// Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyDsE2mtR_efOOu4ugdlEDaK8uFa5J8BHC4",
     authDomain: "rite-f9c21.firebaseapp.com",
@@ -15,22 +33,24 @@ const firebaseConfig = {
     measurementId: "G-34VNN1MB0K"
 };
 
-
+// Initialize Firebase app
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
 
-const provider = new GoogleAuthProvider()
+// Initialize Firebase Authentication and Firestore
+const auth = getAuth(app);
 const db = getFirestore(app);
 
+// Google Auth Provider
+const provider = new GoogleAuthProvider();
 
-
+// Export Firebase services and utilities
 export { 
     auth, 
-    GoogleAuthProvider,
-    provider,
+    GoogleAuthProvider, 
+    provider, 
     createUserWithEmailAndPassword, 
     signInWithEmailAndPassword, 
-    signOut,
+    signOut, 
     db, 
     doc, 
     setDoc, 
@@ -39,8 +59,8 @@ export {
     serverTimestamp, 
     query, 
     orderBy, 
+    
 
-getDocs ,
- signInWithPopup
-
+    getDocs, 
+    signInWithPopup 
 };
